@@ -1,36 +1,90 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../assets/logo-ngu-inverse.png';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 
 const Header = () => {
+  const { scrollY } = useScroll();
+
+  const [hidden, setHidden] = useState(false);
+
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    const previous = scrollY.getPrevious();
+    if (latest > previous && latest > 100) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
+
   return (
-    <header>
+    <motion.header
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: '-100%' },
+      }}
+      animate={hidden ? 'hidden' : 'visible'}
+      transition={{ duration: 0.8, ease: 'easeInOut' }}
+    >
       <nav>
         <li>
-          <Link to='/'>HOME</Link>
+          <NavLink
+            to='/'
+            className={(nav) => (nav.isActive ? 'nav-active' : '')}
+          >
+            HOME
+          </NavLink>
         </li>
         <li>
-          <Link to='/photos'>PHOTOS</Link>
+          <NavLink
+            to='/photos'
+            className={(nav) => (nav.isActive ? 'nav-active' : '')}
+          >
+            PHOTOS
+          </NavLink>
         </li>
         <li>
-          <Link to='/videos'>VIDEOS</Link>
+          <NavLink
+            to='/videos'
+            className={(nav) => (nav.isActive ? 'nav-active' : '')}
+          >
+            VIDEOS
+          </NavLink>
         </li>
         <li>
-          <Link to='/'>
-            <img src={logo} height={160} width='auto' alt='logo' />
-          </Link>
+          <NavLink
+            to='/'
+            className={(nav) => (nav.isActive ? 'nav-active' : '')}
+          >
+            <img src={logo} height={150} width='auto' alt='logo' />
+          </NavLink>
         </li>
         <li>
-          <Link to='/tour'>TOUR</Link>
+          <NavLink
+            to='/tour'
+            className={(nav) => (nav.isActive ? 'nav-active' : '')}
+          >
+            TOUR
+          </NavLink>
         </li>
         <li>
-          <Link to='/merch'>MERCH</Link>
+          <NavLink
+            to='/merch'
+            className={(nav) => (nav.isActive ? 'nav-active' : '')}
+          >
+            MERCH
+          </NavLink>
         </li>
         <li>
-          <Link to='/contact'>CONTACT</Link>
+          <NavLink
+            to='/contact'
+            className={(nav) => (nav.isActive ? 'nav-active' : '')}
+          >
+            CONTACT
+          </NavLink>
         </li>
       </nav>
-    </header>
+    </motion.header>
   );
 };
 
