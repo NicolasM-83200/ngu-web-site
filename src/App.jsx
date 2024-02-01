@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
 import Background from './components/Background';
 import AnimatedRoutes from './components/AnimatedRoutes';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div className='main-wrapper'>
         <Header />
         <AnimatedRoutes />
+        <Footer />
       </div>
     </BrowserRouter>
   );
