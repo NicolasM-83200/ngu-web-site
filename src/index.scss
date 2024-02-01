@@ -1,6 +1,13 @@
+// General styles
 @import './settings';
+
+// style pages
 @import './styles/pages/home';
 @import './styles/pages/photos';
 @import './styles/pages/videos';
+@import './styles/pages/tour';
+
+// style components
 @import './styles/components/background';
-@import './styles/components/header';
+@import './styles/components/navigation';
+@import './styles/components/hamburgerSnake';
