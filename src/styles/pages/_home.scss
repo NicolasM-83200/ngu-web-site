@@ -1,8 +1,11 @@
 .home__title {
   font-size: 5rem;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: calc(100vh - 197px - var(--padding-top-section));
+  display: grid;
+  place-items: center;
   filter: drop-shadow(0 0 0.75rem #fff);
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+  }
 }
