@@ -7,6 +7,7 @@ import Videos from '../pages/Videos';
 import Tour from '../pages/Tour';
 import Merch from '../pages/Merch';
 import Contact from '../pages/Contact';
+import PhotosAlbum from '../pages/PhotosAlbum';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -15,6 +16,7 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path='/' element={<Home />} />
         <Route path='/photos' element={<Photos />} />
+        <Route path='/photos/:albumId' element={<PhotosAlbum />} />
         <Route path='/videos' element={<Videos />} />
         <Route path='/tour' element={<Tour />} />
         <Route path='/merch' element={<Merch />} />
