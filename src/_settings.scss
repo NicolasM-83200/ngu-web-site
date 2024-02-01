@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
 
+:root {
+  --padding-top-section: 50px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +12,23 @@
 a {
   text-decoration: none;
   color: inherit;
+}
+h2 {
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #f3f3f3;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 body {
@@ -18,8 +39,8 @@ body {
 }
 .main-wrapper {
   max-width: 1440px;
-  margin: 0 auto;
+  margin-inline: auto;
 }
 section {
-  min-height: 100vh;
+  margin-inline: 20px;
 }
