@@ -9,7 +9,9 @@ const Contact = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
-      <h1>Contact Page</h1>
+      <div className='contact-container'>
+        <h2>Contact Page</h2>
+      </div>
     </motion.section>
   );
 };

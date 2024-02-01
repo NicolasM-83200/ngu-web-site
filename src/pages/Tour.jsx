@@ -9,7 +9,9 @@ const Tour = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
-      <h1>Tour Page</h1>
+      <div className='tour-container'>
+        <h2>Dates concerts</h2>
+      </div>
     </motion.section>
   );
 };

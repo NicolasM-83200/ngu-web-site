@@ -9,7 +9,9 @@ const Merch = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
-      <h1>Merch Page</h1>
+      <div className='merch-container'>
+        <h2>Merch Page</h2>
+      </div>
     </motion.section>
   );
 };
