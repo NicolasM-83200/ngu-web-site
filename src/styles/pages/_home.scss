@@ -1,11 +1,22 @@
-.home__title {
-  font-size: 5rem;
-  height: calc(100vh - 197px - var(--padding-top-section));
-  display: grid;
-  place-items: center;
-  filter: drop-shadow(0 0 0.75rem #fff);
+#home {
+  min-height: calc(100vh - 100px - 80px);
 
-  @media screen and (max-width: 768px) {
-    font-size: 2rem;
+  .home-title {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+      font-size: 5rem;
+      height: calc(100vh - 197px - var(--padding-top-section));
+      display: grid;
+      place-items: center;
+      filter: drop-shadow(0 0 0.75rem #fff);
+
+      @media screen and (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
   }
 }

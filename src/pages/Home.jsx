@@ -9,7 +9,9 @@ const Home = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
-      <h1 className='home__title'>NEW VIDEO AVAILABLE</h1>
+      <div className='home-title'>
+        <h1 className='home-title__text'>NEW VIDEO AVAILABLE</h1>
+      </div>
     </motion.section>
   );
 };
