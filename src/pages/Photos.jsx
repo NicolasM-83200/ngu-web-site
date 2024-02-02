@@ -14,6 +14,8 @@ const Photos = () => {
     getAlbumsList();
   }, []);
 
+  console.log(albums.albums?.data);
+
   return (
     <motion.section
       id='photos'
@@ -23,7 +25,7 @@ const Photos = () => {
     >
       <h2>Photos Page</h2>
       <div className='album-container'>
-        {albums.map((album) => (
+        {albums.albums?.data.map((album) => (
           <Link
             className='album-container__link'
             to={`/photos/${album.id}`}
