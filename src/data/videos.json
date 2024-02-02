@@ -1,47 +1,53 @@
-[
-  {
-    "id": "JdGBbpkKaPM",
-    "title": "Never give up - Le Korigan 19.08.2012",
-    "url": "https://www.youtube.com/embed/JdGBbpkKaPM?rel=0&amp;controls=1&amp;showinfo=0"
-  },
-  {
-    "id": "cKhL9s4VoW4",
-    "title": "Never give up - Self Discipline (OFFICIAL CLIP)",
-    "url": "https://www.youtube.com/embed/cKhL9s4VoW4?rel=0&amp;controls=1&amp;showinfo=0"
-  },
-  {
-    "id": "-rkGhbzP2MQ",
-    "title": "Never give up - Banksters",
-    "url": "https://www.youtube.com/embed/-rkGhbzP2MQ?rel=0&amp;controls=1&amp;showinfo=0"
-  },
-  {
-    "id": "44760P-E3XQ",
-    "title": "Never give up - Live Jolly Rogers",
-    "url": "https://www.youtube.com/embed/44760P-E3XQ?rel=0&amp;controls=1&amp;showinfo=0"
-  },
-  {
-    "id": "uflbMK6iX7M",
-    "title": "Never give up - Black Sheep (2013)",
-    "url": "https://www.youtube.com/embed/uflbMK6iX7M?rel=0&amp;controls=1&amp;showinfo=0"
-  },
-  {
-    "id": "UzMytN97wDE",
-    "title": "Never give up - Teaser EP 'SET NEW ORDER'",
-    "url": "https://www.youtube.com/embed/UzMytN97wDE?rel=0&amp;controls=1&amp;showinfo=0"
-  },
-  {
-    "id": "wWzeto4Nn50",
-    "title": "Never give up - Live TROOP MC",
-    "url": "https://www.youtube.com/embed/wWzeto4Nn50?rel=0&amp;controls=1&amp;showinfo=0"
-  },
-  {
-    "id": "ayicxE76n6o",
-    "title": "Never give up - Just Think (OFFICIAL VIDEO)",
-    "url": "https://www.youtube.com/embed/ayicxE76n6o?rel=0&amp;controls=1&amp;showinfo=0"
-  },
-  {
-    "id": "rE5127xd5zc",
-    "title": "Never give up - Rising From The Ashes (OFFICIAL VIDEO)",
-    "url": "https://www.youtube.com/embed/rE5127xd5zc?rel=0&amp;controls=1&amp;showinfo=0"
-  }
-]
+{
+  "clip": [
+    {
+      "id": "rE5127xd5zc",
+      "title": "Never give up - Rising From The Ashes (OFFICIAL VIDEO)",
+      "url": "https://www.youtube.com/embed/rE5127xd5zc?rel=0&amp;controls=1&amp;showinfo=0"
+    },
+    {
+      "id": "ayicxE76n6o",
+      "title": "Never give up - Just Think (OFFICIAL VIDEO)",
+      "url": "https://www.youtube.com/embed/ayicxE76n6o?rel=0&amp;controls=1&amp;showinfo=0"
+    },
+    {
+      "id": "uflbMK6iX7M",
+      "title": "Never give up - Black Sheep (2013)",
+      "url": "https://www.youtube.com/embed/uflbMK6iX7M?rel=0&amp;controls=1&amp;showinfo=0"
+    },
+    {
+      "id": "-rkGhbzP2MQ",
+      "title": "Never give up - Banksters",
+      "url": "https://www.youtube.com/embed/-rkGhbzP2MQ?rel=0&amp;controls=1&amp;showinfo=0"
+    },
+    {
+      "id": "cKhL9s4VoW4",
+      "title": "Never give up - Self Discipline (OFFICIAL CLIP)",
+      "url": "https://www.youtube.com/embed/cKhL9s4VoW4?rel=0&amp;controls=1&amp;showinfo=0"
+    }
+  ],
+  "live": [
+    {
+      "id": "wWzeto4Nn50",
+      "title": "Never give up - Live TROOP MC",
+      "url": "https://www.youtube.com/embed/wWzeto4Nn50?rel=0&amp;controls=1&amp;showinfo=0"
+    },
+    {
+      "id": "44760P-E3XQ",
+      "title": "Never give up - Live Jolly Rogers",
+      "url": "https://www.youtube.com/embed/44760P-E3XQ?rel=0&amp;controls=1&amp;showinfo=0"
+    },
+    {
+      "id": "JdGBbpkKaPM",
+      "title": "Never give up - Le Korigan 19.08.2012",
+      "url": "https://www.youtube.com/embed/JdGBbpkKaPM?rel=0&amp;controls=1&amp;showinfo=0"
+    }
+  ],
+  "teaser": [
+    {
+      "id": "UzMytN97wDE",
+      "title": "Never give up - Teaser EP 'SET NEW ORDER'",
+      "url": "https://www.youtube.com/embed/UzMytN97wDE?rel=0&amp;controls=1&amp;showinfo=0"
+    }
+  ]
+}
