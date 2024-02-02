@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
 
-:root {
-  --padding-top-section: 50px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -32,15 +28,18 @@ h2 {
 }
 
 body {
-  min-height: 100vh;
   background-color: #0a0a0a;
   font-family: 'PT Sans Narrow', sans-serif;
   color: #f3f3f3;
+  position: relative;
 }
 .main-wrapper {
   max-width: 1440px;
+  min-height: 100vh;
+  overflow-x: hidden;
   margin-inline: auto;
 }
 section {
   margin-inline: 20px;
+  padding-block: 60px;
 }
