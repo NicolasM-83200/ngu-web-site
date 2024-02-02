@@ -1,11 +1,11 @@
 import React from 'react';
 import logo from '../assets/logo-ngu-inverse.png';
 
-const HamburgerSnake = ({ isOpen }) => {
+const HamburgerSnake = () => {
   return (
-    <button className='navbar-toggle'>
+    <div className='hamburger'>
       <img src={logo} height={75} alt='bouton navbar' />
-    </button>
+    </div>
   );
 };
 
