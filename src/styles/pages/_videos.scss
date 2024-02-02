@@ -1,6 +1,6 @@
-.videos-container {
+.videos-container__clip {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   justify-items: center;
   justify-content: center;
   grid-gap: 20px;
@@ -11,9 +11,5 @@
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
     max-width: 100%;
-
-    @media screen and (max-width: 768px) {
-      // height: 190px;
-    }
   }
 }
