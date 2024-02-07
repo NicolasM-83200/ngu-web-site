@@ -4,6 +4,10 @@
   margin-inline: auto;
   gap: 40px;
 
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
   &__dates {
     position: relative;
     display: grid;
