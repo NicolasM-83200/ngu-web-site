@@ -16,9 +16,9 @@ const PhotosAlbum = () => {
   // console.log(album);
 
   const photos = album.photos.data.map((photo) => ({
-    src: photo.images[0].source,
-    width: photo.images[0].width,
-    height: photo.images[0].height,
+    src: photo.webp_images[0].source,
+    width: photo.webp_images[0].width,
+    height: photo.webp_images[0].height,
     key: photo.id,
     alt: photo.id,
   }));
