@@ -33,6 +33,12 @@ const Tour = () => {
       venue: 'Ball Arena',
       price: '$50',
     },
+    {
+      date: '2023-01-28',
+      city: 'Toulon, FR',
+      venue: 'Ball Arena',
+      price: '$450',
+    },
   ];
 
   return (
