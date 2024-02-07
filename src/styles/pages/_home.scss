@@ -1,11 +1,7 @@
 #home {
-  min-height: calc(100vh - 100px - 80px);
-
   .home-title {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: calc(100vh - 197px - 120px);
+    display: grid;
 
     &__text {
       font-size: 5rem;
