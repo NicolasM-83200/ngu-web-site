@@ -1,3 +1,7 @@
+.loader-container {
+  display: grid;
+  min-height: calc(100vh - 197px - 80px);
+}
 .album-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
