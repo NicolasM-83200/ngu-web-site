@@ -1,0 +1,41 @@
+.accordion {
+  width: 90%;
+  margin: 30px auto;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    cursor: pointer;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-primary);
+    // background-color: var(--color-secondary);
+    backdrop-filter: var(--bg-videos);
+
+    &-arrow {
+      transition: transform 0.3s ease-in-out;
+
+      &.open {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+    backdrop-filter: var(--bg-videos);
+    transition: height 0.3s ease-in-out;
+
+    &.open {
+      height: auto;
+    }
+
+    &.closed {
+      height: 0;
+    }
+  }
+}
