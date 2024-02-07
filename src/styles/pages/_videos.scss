@@ -1,4 +1,11 @@
-.videos-container__clip {
+.videosYT-container {
+  min-height: calc(100vh - 197px - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.accordion__content-videos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   justify-items: center;
