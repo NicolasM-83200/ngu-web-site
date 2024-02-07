@@ -1,3 +1,58 @@
+.hamburger-btn {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  right: 0;
+  top: 0;
+  z-index: 10;
+  position: absolute;
+  background: transparent;
+  margin: 1em;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__outline {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+
+    &.--outline-1 {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      animation: morph 5s infinite;
+    }
+    &.--outline-2 {
+      border-radius: 53% 47% 43% 57% / 51% 39% 61% 49%;
+      animation: morph2 3s infinite;
+    }
+  }
+
+  @keyframes morph {
+    0% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+  }
+  @keyframes morph2 {
+    0% {
+      border-radius: 53% 47% 43% 57% / 51% 39% 61% 49%;
+    }
+    50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+      border-radius: 53% 47% 43% 57% / 51% 39% 61% 49%;
+    }
+  }
+}
+
 .navbar {
   @media screen and (max-width: 768px) {
     position: absolute;
