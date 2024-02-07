@@ -8,9 +8,18 @@
   justify-items: center;
   gap: 20px;
 
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
   &__link {
     width: 180px;
     height: 180px;
+
+    @media screen and (max-width: 768px) {
+      width: 150px;
+      height: 150px;
+    }
   }
 
   &__image {
