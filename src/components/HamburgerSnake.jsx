@@ -1,10 +1,17 @@
 import React from 'react';
-import logo from '../assets/logo-ngu-inverse.png';
 
-const HamburgerSnake = () => {
+const HamburgerSnake = ({ isOpen }) => {
   return (
     <div className='hamburger'>
-      <img src={logo} height={75} alt='bouton navbar' />
+      <span
+        className={`hamburger__burger ${isOpen ? '--open' : '--closed'}`}
+      ></span>
+      <span
+        className={`hamburger__burger ${isOpen ? '--open' : '--closed'}`}
+      ></span>
+      <span
+        className={`hamburger__burger ${isOpen ? '--open' : '--closed'}`}
+      ></span>
     </div>
   );
 };
