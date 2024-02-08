@@ -10,6 +10,7 @@ const Videos = () => {
       videos: videosYT.clip.map((video) => (
         <iframe
           key={video.id}
+          loading='lazy'
           width='560'
           height='315'
           src={video.url}
@@ -25,6 +26,7 @@ const Videos = () => {
       videos: videosYT.live.map((video) => (
         <iframe
           key={video.id}
+          loading='lazy'
           width='560'
           height='315'
           src={video.url}
@@ -40,6 +42,7 @@ const Videos = () => {
       videos: videosYT.albums.map((video) => (
         <iframe
           key={video.id}
+          loading='lazy'
           width='560'
           height='315'
           src={video.url}
