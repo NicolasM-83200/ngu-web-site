@@ -23,7 +23,7 @@ const Navigation = () => {
       path: '/videos',
     },
     {
-      name: <img src={logo} height={150} width='auto' alt='logo' />,
+      name: <img src={logo} height={150} width={150} alt='logo' />,
       path: '/',
     },
     {
