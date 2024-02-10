@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
 import { PhotoAlbum } from 'react-photo-album';
 import { useLocation } from 'react-router-dom';
@@ -7,21 +7,40 @@ import 'yet-another-react-lightbox/styles.css';
 const PhotosAlbum = () => {
   const location = useLocation();
 
-  const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(-1);
   const [closeOnBackdropClick, setCloseOnBackdropClick] = useState(true);
+  // const [photosList, setPhotosList] = useState(location.state.photos.data);
+  const [album, setAlbum] = useState(location.state);
 
-  const album = location.state;
-
-  // console.log(album);
-
-  const photos = album.photos.data.map((photo) => ({
+  const photos = album?.photos?.data.map((photo) => ({
     src: photo.webp_images[0].source,
     width: photo.webp_images[0].width,
     height: photo.webp_images[0].height,
     key: photo.id,
     alt: photo.id,
   }));
+
+  const loadMore = () => {
+    if (album.photos?.paging.hasOwnProperty('next')) {
+      //If there are any more photos
+      fetch(album.photos.paging.next)
+        .then((response) => response.json())
+        .then((response) => {
+          const updatedAlbum = {
+            ...album,
+            photos: {
+              ...album.photos,
+              data: [...album.photos.data, ...response.data],
+              paging: response.paging,
+            },
+          };
+          setAlbum(updatedAlbum);
+        });
+    } else {
+      console.log('no more photos');
+      alert('No more photos');
+    }
+  };
 
   return (
     <section id='album'>
@@ -41,15 +60,7 @@ const PhotosAlbum = () => {
         close={() => setIndex(-1)}
         controller={{ closeOnBackdropClick }}
       />
-
-      {/* {album.photos.data.map((photo) => (
-        <img
-          src={photo.images[0].source}
-          alt={photo.id}
-          className='photo'
-          key={photo.id}
-        />
-      ))} */}
+      <button onClick={loadMore}>Load More</button>
     </section>
   );
 };
