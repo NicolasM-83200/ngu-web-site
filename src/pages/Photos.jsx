@@ -22,7 +22,9 @@ const Photos = () => {
     }
   }, [datas]);
 
-  // console.log(datas);
+  const photosOfSrc = datas?.feed.data.find((photo) =>
+    photo.hasOwnProperty('full_picture')
+  );
 
   return (
     <motion.section
@@ -44,8 +46,8 @@ const Photos = () => {
           >
             <figure className='album-container__figure'>
               <img
-                src={datas.feed?.data[1].full_picture}
-                alt='Photos By'
+                src={photosOfSrc.full_picture}
+                alt='Photos Of'
                 className='album-container__image'
                 width={180}
               />
