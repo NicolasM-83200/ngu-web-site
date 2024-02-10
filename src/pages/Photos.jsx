@@ -38,30 +38,57 @@ const Photos = () => {
       ) : (
         <div className='album-container'>
           <Link
+            to={`/photos/photos_of`}
+            className='album-container__link'
+            state={datas?.feed}
+          >
+            <figure className='album-container__figure'>
+              <img
+                src={datas.feed?.data[1].full_picture}
+                alt='Photos By'
+                className='album-container__image'
+                width={180}
+              />
+              <figcaption className='album-container__figcaption'>
+                Photos du journal
+              </figcaption>
+            </figure>
+          </Link>
+          <Link
             to={`/photos/photos_by`}
             className='album-container__link'
             state={datas?.photos}
           >
-            <img
-              src={datas.photos?.data[0].webp_images[0].source}
-              alt='Photos By'
-              className='album-container__image'
-              width={180}
-            />
+            <figure className='album-container__figure'>
+              <img
+                src={datas.photos?.data[0].webp_images[0].source}
+                alt='Photos By'
+                className='album-container__image'
+                width={180}
+              />
+              <figcaption className='album-container__figcaption'>
+                {datas.photos?.data[0].album.name}
+              </figcaption>
+            </figure>
           </Link>
-          {datas.albums?.data.map((album) => (
+          {datas?.albums?.data.map((album) => (
             <Link
               className='album-container__link'
               to={`/photos/${album.id}`}
               key={album.id}
               state={album}
             >
-              <img
-                src={album.picture.data.url}
-                alt={album.name}
-                className='album-container__image'
-                width={180}
-              />
+              <figure className='album-container__figure'>
+                <img
+                  src={album.picture.data.url}
+                  alt={album.name}
+                  className='album-container__image'
+                  width={180}
+                />
+                <figcaption className='album-container__figcaption'>
+                  {album.name}
+                </figcaption>
+              </figure>
             </Link>
           ))}
         </div>
