@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
 import { PhotoAlbum } from 'react-photo-album';
 import { useLocation } from 'react-router-dom';
@@ -7,29 +7,29 @@ import 'yet-another-react-lightbox/styles.css';
 const PhotosBy = () => {
   const location = useLocation();
 
-  const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(-1);
   const [closeOnBackdropClick, setCloseOnBackdropClick] = useState(true);
 
-  const photosList = location.state;
+  const [photosList, setPhotosList] = useState(location.state);
 
-  console.log(photosList);
-
-  if (photosList.paging.hasOwnProperty('next')) {
-    //If there are any more albums
-    fetch(photosList.paging.next)
-      .then((response) => response.json())
-      .then((response) => {
-        // response.data.forEach(album => {
-        //   album.cover_photo = album.cover_photo.picture; //All we need is picture
-        // });
-        // console.log(response.data);
-        photosList.data.push(...response.data); //Append albums
-        photosList.paging = response.paging; //Set paging to new values
-      });
-  } else {
-    console.log('no more albums');
-  }
+  const loadMore = () => {
+    if (photosList.paging?.hasOwnProperty('next')) {
+      //If there are any more photos
+      fetch(photosList.paging.next)
+        .then((response) => response.json())
+        .then((response) => {
+          const updatedAlbum = {
+            ...photosList.data,
+            data: [...photosList.data, ...response.data],
+            paging: response.paging,
+          };
+          setPhotosList(updatedAlbum);
+        });
+    } else {
+      console.log('no more albums');
+      alert('No more photos');
+    }
+  };
 
   const photos = photosList.data.map((photo) => ({
     src: photo.webp_images[0].source,
@@ -41,8 +41,7 @@ const PhotosBy = () => {
 
   return (
     <section id='album'>
-      <h2>Photos Album Page</h2>
-      <p>Album Name: Photos de vous</p>
+      <p>Album Name: {photosList.data[0].album.name}</p>
 
       <PhotoAlbum
         layout='masonry'
@@ -57,15 +56,7 @@ const PhotosBy = () => {
         close={() => setIndex(-1)}
         controller={{ closeOnBackdropClick }}
       />
-
-      {/* {album.photos.data.map((photo) => (
-        <img
-          src={photo.images[0].source}
-          alt={photo.id}
-          className='photo'
-          key={photo.id}
-        />
-      ))} */}
+      <button onClick={loadMore}>Load More</button>
     </section>
   );
 };
