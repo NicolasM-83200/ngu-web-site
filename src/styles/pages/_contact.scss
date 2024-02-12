@@ -1,4 +1,21 @@
 .contact-container {
-  display: grid;
-  justify-items: center;
+  min-height: calc(100vh - 197px - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__logos-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  &__list-item {
+    list-style: none;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 }
