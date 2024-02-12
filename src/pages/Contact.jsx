@@ -1,4 +1,7 @@
 import React from 'react';
+import facebookLogo from '../assets/img/facebook.png';
+import instagramLogo from '../assets/img/instagram.png';
+import youtubeLogo from '../assets/img/youtube.png';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -10,7 +13,56 @@ const Contact = () => {
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
       <div className='contact-container'>
-        <h2>Contact Page</h2>
+        <ul className='contact-container__logos-container'>
+          <li className='contact-container__list-item'>
+            <a
+              href='https://www.facebook.com/profile.php?id=100064151672863'
+              target='_blank'
+              rel='noreferrer'
+              className='contact-container__link'
+            >
+              <img
+                src={facebookLogo}
+                width={120}
+                height={120}
+                alt='Facebook'
+                className='contact-container__logo'
+              />
+            </a>
+          </li>
+          <li className='contact-container__list-item'>
+            <a
+              href='https://www.instagram.com/nevergiveuphxc/'
+              target='_blank'
+              rel='noreferrer'
+              className='contact-container__link'
+            >
+              <img
+                src={instagramLogo}
+                width={120}
+                height={120}
+                alt='Instagram'
+                className='contact-container__logo'
+              />
+            </a>
+          </li>
+          <li className='contact-container__list-item'>
+            <a
+              href='https://www.youtube.com/@NeverGiveUptoulon'
+              target='_blank'
+              rel='noreferrer'
+              className='contact-container__link'
+            >
+              <img
+                src={youtubeLogo}
+                width={120}
+                height={120}
+                alt='Youtube'
+                className='contact-container__logo'
+              />
+            </a>
+          </li>
+        </ul>
       </div>
     </motion.section>
   );
