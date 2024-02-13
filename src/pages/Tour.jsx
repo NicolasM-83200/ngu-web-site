@@ -4,40 +4,10 @@ import { motion } from 'framer-motion';
 const Tour = () => {
   const tourDates = [
     {
-      date: '2022-06-15',
-      city: 'New York, NY',
-      venue: 'Madison Square Garden',
-      price: '$125',
-    },
-    {
-      date: '2022-06-18',
-      city: 'Los Angeles, CA',
-      venue: 'The Forum',
-      price: '$25',
-    },
-    {
-      date: '2022-06-22',
-      city: 'Chicago, IL',
-      venue: 'United Center',
-      price: '$105',
-    },
-    {
-      date: '2022-06-25',
-      city: 'Miami, FL',
-      venue: 'American Airlines Arena',
-      price: '$75',
-    },
-    {
-      date: '2022-06-28',
-      city: 'Denver, CO',
-      venue: 'Ball Arena',
-      price: '$50',
-    },
-    {
-      date: '2023-01-28',
-      city: 'Toulon, FR',
-      venue: 'Ball Arena',
-      price: '$450',
+      date: '2024-03-30',
+      city: 'Montpellier',
+      venue: 'KJBI',
+      price: '$',
     },
   ];
 
