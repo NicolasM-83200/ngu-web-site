@@ -8,14 +8,53 @@
     display: flex;
     justify-content: center;
     gap: 40px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
   &__list-item {
     list-style: none;
-    transition: all 300ms ease-in-out;
+    filter: drop-shadow(0 0 5px #ffffff);
+  }
+  &__link {
+    width: 120px;
+    height: 120px;
+    perspective: 1000px;
+    display: inline-block;
 
     &:hover {
-      transform: scale(1.2);
+      z-index: 10;
     }
+  }
+  &__highlight-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 9999px;
+    transition: all 300ms ease-out;
+  }
+  &__logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    transition: all 300ms ease-out;
+    border-radius: 9999px;
+    mix-blend-mode: hard-light;
+    background: radial-gradient(
+      circle at 50% 0%,
+      rgb(184, 196, 211),
+      transparent
+    );
   }
 }
