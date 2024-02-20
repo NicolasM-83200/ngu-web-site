@@ -1,7 +1,8 @@
 .contact-container {
   min-height: calc(100vh - 197px - 120px);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 
   &__logos-container {
@@ -10,8 +11,9 @@
     gap: 40px;
 
     @media screen and (max-width: 768px) {
-      flex-direction: column;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
     }
   }
 
@@ -20,8 +22,8 @@
     filter: drop-shadow(0 0 5px #ffffff);
   }
   &__link {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     perspective: 1000px;
     display: inline-block;
 
@@ -56,5 +58,97 @@
       rgb(184, 196, 211),
       transparent
     );
+  }
+
+  // Form ------------------------
+  &__form-container {
+    width: 100%;
+    margin-block: 30px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid #000000b0;
+    box-shadow: #ffffff 0px 0px 5px 0px;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 500px;
+  }
+  &__form-group {
+    position: relative;
+    margin-block: 12px;
+  }
+  &__input {
+    width: 100%;
+    height: 40px;
+    padding: 8px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    transition: all 300ms ease-out;
+    font-size: 1rem;
+    color: #000;
+    font-weight: 500;
+    font-family: inherit;
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+  #message {
+    height: 100px;
+    letter-spacing: 1px;
+    font-family: inherit;
+    resize: none;
+  }
+  &__label {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0 10px;
+    color: #000;
+    pointer-events: none;
+    transition: 0.15s all ease;
+  }
+  &__input:focus + &__label,
+  &__input:not(:placeholder-shown) + &__label {
+    transform: translate(5px, -22px);
+    font-size: 0.8rem;
+    font-weight: normal;
+    padding: 0 5px;
+  }
+  &__submitBtn {
+    width: fit-content;
+    margin-inline: auto;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #000000b4;
+    text-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #000000b4;
+    transition: 0.5s ease;
+    user-select: none;
+
+    &:hover,
+    &:focus {
+      color: #ffffff;
+      background: #008cff;
+      border: 1px solid #008cff;
+      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+      box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+        0 0 100px #008cff;
+    }
   }
 }
