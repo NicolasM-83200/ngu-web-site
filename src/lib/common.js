@@ -26,8 +26,8 @@ export const mouseMoveHandler = (element, e) => {
   let midCardWidth = elRect.width / 2;
   let midCardHeight = elRect.height / 2;
 
-  let angleY = -(x - midCardWidth) / 4;
-  let angleX = (y - midCardHeight) / 4;
+  let angleY = -(x - midCardWidth) / 1.5;
+  let angleX = (y - midCardHeight) / 1.5;
 
   let highlightX = (x / elRect.width) * 100;
   let highlightY = (y / elRect.height) * 100;
