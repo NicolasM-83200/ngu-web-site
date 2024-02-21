@@ -60,7 +60,7 @@ const FormContact = () => {
           type='text'
           placeholder='Your name...'
           required
-          autocomplete='off'
+          autoComplete='off'
         />
         <label className='contact-container__label' htmlFor='name'>
           Your name
@@ -74,7 +74,7 @@ const FormContact = () => {
           type='email'
           placeholder='Your email...'
           required
-          autocomplete='off'
+          autoComplete='off'
         />
         <label className='contact-container__label' htmlFor='email'>
           Your email
@@ -88,7 +88,7 @@ const FormContact = () => {
           type='text'
           placeholder='Object of the message...'
           required
-          autocomplete='off'
+          autoComplete='off'
         />
         <label className='contact-container__label' htmlFor='object'>
           Object of the message
@@ -102,7 +102,7 @@ const FormContact = () => {
           placeholder='Message'
           rows={5}
           required
-          autocomplete='off'
+          autoComplete='off'
         ></textarea>
         <label className='contact-container__label' htmlFor='message'>
           Message
