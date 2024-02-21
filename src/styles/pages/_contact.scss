@@ -77,6 +77,24 @@
     width: 100%;
     max-width: 500px;
   }
+  &__notif-container {
+    text-align: center;
+    width: 70%;
+    margin-inline: auto;
+    padding: 5px 0;
+    border: 2px solid green;
+    border-radius: 15px;
+    background-color: rgba(0, 128, 0, 0.5);
+    color: #004500;
+    letter-spacing: 1px;
+    font-weight: bold;
+
+    &.error {
+      border-color: red;
+      background-color: rgba(128, 0, 0, 0.5);
+      color: #450000;
+    }
+  }
   &__form-group {
     position: relative;
     margin-block: 12px;
