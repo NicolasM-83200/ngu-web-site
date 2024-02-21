@@ -5,6 +5,7 @@ import youtubeLogo from '../assets/img/youtube.png';
 import tiktokLogo from '../assets/img/tiktok.png';
 import { motion } from 'framer-motion';
 import { mouseLeaveHandler, mouseMoveHandler } from '../lib/common';
+import FormContact from '../components/FormContact';
 
 const Contact = () => {
   useEffect(() => {
@@ -23,10 +24,6 @@ const Contact = () => {
       };
     });
   }, []); // Exécutez une fois lorsque le composant est monté
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-  };
 
   const socialMedia = [
     {
@@ -84,55 +81,7 @@ const Contact = () => {
         </ul>
 
         <div className='contact-container__form-container'>
-          <form className='contact-container__form' onSubmit={handleFormSubmit}>
-            <div className='contact-container__form-group'>
-              <input
-                id='name'
-                className='contact-container__input'
-                type='text'
-                placeholder='Your name...'
-              />
-              <label className='contact-container__label' htmlFor='name'>
-                Your name
-              </label>
-            </div>
-            <div className='contact-container__form-group'>
-              <input
-                id='email'
-                className='contact-container__input'
-                type='email'
-                placeholder='Your email...'
-              />
-              <label className='contact-container__label' htmlFor='email'>
-                Your email
-              </label>
-            </div>
-            <div className='contact-container__form-group'>
-              <input
-                id='object'
-                className='contact-container__input'
-                type='text'
-                placeholder='Object of the message...'
-              />
-              <label className='contact-container__label' htmlFor='object'>
-                Object of the message
-              </label>
-            </div>
-            <div className='contact-container__form-group'>
-              <textarea
-                id='message'
-                className='contact-container__input'
-                placeholder='Message'
-                rows={5}
-              ></textarea>
-              <label className='contact-container__label' htmlFor='message'>
-                Message
-              </label>
-            </div>
-            <button className='contact-container__submitBtn' type='submit'>
-              send message
-            </button>
-          </form>
+          <FormContact />
         </div>
       </div>
     </motion.section>
