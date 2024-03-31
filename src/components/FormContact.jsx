@@ -20,6 +20,7 @@ const FormContact = () => {
       )
       .then(
         (result) => {
+          console.log(result);
           setNotification({
             error: false,
             message: 'Message sent successfully!',
@@ -30,6 +31,7 @@ const FormContact = () => {
           }, 5000);
         },
         (error) => {
+          console.log(error);
           setNotification({
             error: true,
             message: 'An error occurred, please try again later.',

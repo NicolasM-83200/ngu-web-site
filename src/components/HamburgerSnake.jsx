@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const HamburgerSnake = ({ isOpen }) => {
@@ -14,6 +15,10 @@ const HamburgerSnake = ({ isOpen }) => {
       ></span>
     </div>
   );
+};
+
+HamburgerSnake.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
 };
 
 export default HamburgerSnake;
