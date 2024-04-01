@@ -1,18 +1,36 @@
 #home {
-  .home-title {
-    min-height: calc(100vh - 197px - 120px);
-    display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    &__text {
-      font-size: 5rem;
-      height: calc(100vh - 197px - var(--padding-top-section));
-      display: grid;
-      place-items: center;
-      filter: drop-shadow(0 0 0.75rem #fff);
+.home {
+  &__title-text {
+    text-align: center;
+    margin-bottom: 50px;
+  }
 
-      @media screen and (max-width: 768px) {
-        font-size: 2rem;
-      }
-    }
+  &__video {
+    border-radius: 25px;
+  }
+}
+
+.about {
+  background: url('/photo-montage.jpg') center/cover no-repeat;
+  width: 90%;
+  border-radius: 50px;
+  margin-block: 50px;
+
+  &__overlay {
+    backdrop-filter: brightness(0.4);
+    padding: 50px;
+    border-radius: 50px;
+  }
+  &__title {
+    font-size: 3rem;
+  }
+  &__text {
+    font-size: 1.5rem;
+    text-align: center;
   }
 }
