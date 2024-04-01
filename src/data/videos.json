@@ -1,13 +1,18 @@
 {
   "clip": [
     {
+      "id": "S3UHH91fb-Y",
+      "title": "Never give up - IN FLAMES (OFFICIAL VIDEO 2024)",
+      "url": "https://www.youtube.com/embed/S3UHH91fb-Y?rel=0&amp;controls=1&amp;showinfo=0"
+    },
+    {
       "id": "rE5127xd5zc",
-      "title": "Never give up - Rising From The Ashes (OFFICIAL VIDEO)",
+      "title": "Never give up - Rising From The Ashes (OFFICIAL VIDEO 2023)",
       "url": "https://www.youtube.com/embed/rE5127xd5zc?rel=0&amp;controls=1&amp;showinfo=0"
     },
     {
       "id": "ayicxE76n6o",
-      "title": "Never give up - Just Think (OFFICIAL VIDEO)",
+      "title": "Never give up - Just Think (OFFICIAL VIDEO 2016)",
       "url": "https://www.youtube.com/embed/ayicxE76n6o?rel=0&amp;controls=1&amp;showinfo=0"
     },
     {
@@ -27,7 +32,8 @@
     }
   ],
   "live": [
-    { "id": "LQdqT1x7NaM",
+    {
+      "id": "LQdqT1x7NaM",
       "title": "Live Bad Punk festival - MOLOTOV Marseille (10-02-2024)",
       "url": "https://www.youtube.com/embed/LQdqT1x7NaM?rel=0&amp;controls=1&amp;showinfo=0d"
     },
