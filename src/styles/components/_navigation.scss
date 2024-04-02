@@ -1,5 +1,5 @@
 .hamburger-btn {
-  @media screen and (min-width: 768px) {
+  @media (width >= 768px) {
     display: none;
   }
   right: 0;
@@ -54,7 +54,7 @@
 }
 
 .navbar {
-  @media screen and (max-width: 768px) {
+  @media (width < 768px) {
     position: absolute;
     display: grid;
     height: 100vh;
@@ -75,7 +75,7 @@
     align-items: center;
     padding: 20px;
 
-    @media screen and (max-width: 768px) {
+    @media (width < 768px) {
       flex-direction: column;
       justify-content: space-evenly;
     }
@@ -86,7 +86,7 @@
     margin: 0 1rem;
     font-size: 1.5rem;
 
-    @media screen and (max-width: 768px) {
+    @media (width < 768px) {
       &:nth-child(4) {
         display: none;
       }

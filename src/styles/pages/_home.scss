@@ -5,13 +5,28 @@
 }
 
 .home {
+  &__title {
+    width: 90%;
+    @media (width < 768px) {
+      width: 100%;
+    }
+  }
   &__title-text {
     text-align: center;
     margin-bottom: 50px;
   }
 
   &__video {
-    border-radius: 25px;
+    border-radius: 50px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+
+    @media (width < 768px) {
+      border-radius: 25px;
+      height: 320px;
+      aspect-ratio: 4/3;
+    }
   }
 }
 
@@ -20,17 +35,31 @@
   width: 90%;
   border-radius: 50px;
   margin-block: 50px;
+  @media (width < 768px) {
+    width: 100%;
+    border-radius: 25px;
+  }
 
   &__overlay {
     backdrop-filter: brightness(0.4);
     padding: 50px;
     border-radius: 50px;
+    @media (width < 768px) {
+      border-radius: 25px;
+      padding: 25px;
+    }
   }
   &__title {
     font-size: 3rem;
+    @media (width < 768px) {
+      font-size: 2rem;
+    }
   }
   &__text {
     font-size: 1.5rem;
     text-align: center;
+    @media (width < 768px) {
+      font-size: 1.2rem;
+    }
   }
 }
