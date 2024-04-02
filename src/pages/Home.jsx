@@ -66,6 +66,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* News section */}
+      <div className='news-container'></div>
     </motion.section>
   );
 };
