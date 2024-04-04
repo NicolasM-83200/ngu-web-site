@@ -3,3 +3,8 @@
   to = "https://nevergiveuphxc.com"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
