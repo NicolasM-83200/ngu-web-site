@@ -6,7 +6,7 @@
 
 .news {
   &__title {
-    width: 90%;
+    width: 70%;
     @media (width < 768px) {
       width: 100%;
     }
@@ -32,12 +32,12 @@
 }
 
 .about {
-  background-image: url('/NGU.png');
+  background-image: url('/NGU.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   animation: animBgImg 60s linear infinite;
-  width: 90%;
+  width: 70%;
   border-radius: 50px;
   margin-block: 50px;
   @media (width < 768px) {

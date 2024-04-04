@@ -14,6 +14,7 @@ const Home = () => {
         <h1 className='news__title-text'>NEWS</h1>
         <iframe
           className='news__video'
+          loading='lazy'
           id='ytplayer'
           type='text/html'
           width='720'
