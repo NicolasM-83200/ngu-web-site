@@ -10,10 +10,10 @@ const Home = () => {
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
       {/* news section */}
-      <div className='home__title'>
-        <h1 className='home__title-text'>IN FLAMES -- Never Give Up</h1>
+      <div className='news__title'>
+        <h1 className='news__title-text'>NEWS</h1>
         <iframe
-          className='home__video'
+          className='news__video'
           id='ytplayer'
           type='text/html'
           width='720'

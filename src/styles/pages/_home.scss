@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.home {
+.news {
   &__title {
     width: 90%;
     @media (width < 768px) {
@@ -12,6 +12,7 @@
     }
   }
   &__title-text {
+    font-size: clamp(2rem, 5vw, 3rem);
     text-align: center;
     margin-bottom: 50px;
   }
@@ -31,13 +32,28 @@
 }
 
 .about {
-  background: url('/photo-montage.jpg') center/cover no-repeat;
+  background-image: url('/NGU.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: animBgImg 60s linear infinite;
   width: 90%;
   border-radius: 50px;
   margin-block: 50px;
   @media (width < 768px) {
     width: 100%;
     border-radius: 25px;
+  }
+  @keyframes animBgImg {
+    0% {
+      background-position: left;
+    }
+    50% {
+      background-position: right;
+    }
+    100% {
+      background-position: left;
+    }
   }
 
   &__overlay {
@@ -50,7 +66,7 @@
     }
   }
   &__title {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     @media (width < 768px) {
       font-size: 2rem;
     }
